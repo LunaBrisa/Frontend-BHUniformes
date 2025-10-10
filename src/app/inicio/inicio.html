@@ -1,0 +1,131 @@
+<!-- Partículas flotantes -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5218711234567?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20productos" 
+       class="whatsapp-btn" 
+       target="_blank"
+       title="¡Chatea con nosotros!">
+   
+        <span class="whatsapp-icon">📞</span>
+    </a>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">BH Uniformes</div>
+        <nav>
+            <a (click)="inicio()">Inicio</a>
+            <a (click)="galeria()">Galeria</a>
+           
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+
+        <!-- Perrito Animado -->
+        <div class="perrito-container">
+            <div class="perrito-speech">¡Bienvenidos! 🐾</div>
+            <div class="perrito" onclick="this.style.animation='perrito-spin 0.8s ease-in-out'">🐶</div>
+        </div>
+
+        <div class="hero-content">
+            <h1>¡Vestimos Tu Estilo!</h1>
+            <h2>Tu Mejor Opción en Uniformes y Ropa de Calidad</h2>
+            <p>Somos expertos en confección de uniformes escolares, ropa deportiva, blusas elegantes, sudaderas cómodas y disfraces únicos. Ofrecemos productos de alta calidad con diseños modernos y precios accesibles para toda la familia.</p>
+            <p>Desde 2010 vistiendo a la comunidad de Torreón con estilo, profesionalismo y dedicación.</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">300+</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Garantía de Calidad</div>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <button class="cta-button" onclick="document.getElementById('productos').scrollIntoView({behavior: 'smooth'})">
+                    Explorar Productos
+                </button>
+                <button class="cta-button secondary" onclick="window.open('https://wa.me/5218711234567?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20productos', '_blank')">
+                    💬 Contáctanos
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('productos').scrollIntoView({behavior: 'smooth'})">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section class="productos" id="productos">
+        <h2 class="section-title">Nuestros Productos</h2>
+        <p class="section-subtitle">Calidad, estilo y comodidad en cada prenda que confeccionamos</p>
+        <div class="productos-grid">
+            <div class="producto-card">
+                <div class="producto-icon">👔</div>
+                <h3>Uniformes Escolares</h3>
+                <p>Calidad y durabilidad para el día a día escolar. Diseños cómodos y resistentes que cumplen con todos los requisitos institucionales.</p>
+            </div>
+            <div class="producto-card">
+                <div class="producto-icon">👖</div>
+                <h3>Pantalones</h3>
+                <p>Variedad de estilos: casual, formal, deportivo. Para todas las edades y ocasiones. Telas de primera calidad.</p>
+            </div>
+            <div class="producto-card">
+                <div class="producto-icon">👚</div>
+                <h3>Blusas</h3>
+                <p>Elegantes y modernas. Perfectas para cualquier ocasión, desde casual hasta formal. Diseños únicos y a la medida.</p>
+            </div>
+            
+            <div class="producto-card">
+                <div class="producto-icon">🧥</div>
+                <h3>Sudaderas</h3>
+                <p>Comodidad y estilo en cada diseño. Perfectas para el clima fresco. Materiales suaves y duraderos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel Section -->
+    <section class="carrusel-section" id="galeria">
+        <h2 class="section-title" style="color: var(--amarillo);">Galería de Productos</h2>
+        <p class="section-subtitle" style="color: var(--blanco); opacity: 0.9;">Descubre nuestra amplia variedad de productos</p>
+        <div class="carrusel-container">
+            <div class="carrusel" id="carrusel">
+                <img src="https://scontent.ftrc3-1.fna.fbcdn.net/v/t39.30808-6/515196239_1375410471258848_7964607177618752063_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGKK4Ufb1LXXulMCRXKTMQw4b0eG0MM6Y_hvR4bQwzpj_7WKdoJWSAmO7jF3NzsMIt5BnHC2GJysqH5-WydUZq1&_nc_ohc=qodcVIbacSUQ7kNvwHchc1I&_nc_oc=AdnlDarqyPI-cpPOXGx2JYSYEMRp_4gExFAQlT7Z82RbtSCWwRkKcXh8_7oq1AIEg7E&_nc_zt=23&_nc_ht=scontent.ftrc3-1.fna&_nc_gid=cpxPtLhbwqk5p_3DDQSuRg&oh=00_Afet4vK86YQb_9wR77n9eWpXvT5TgiOM0x1Fk8QVOIAGHA&oe=68EBC65A" alt="Pantalon 1" class="slide">
+                 <img src="https://scontent.ftrc3-1.fna.fbcdn.net/v/t39.30808-6/514041549_1371683344964894_7391830551366669160_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH8gpRlZUq_S59hgyYjrHlXRMQmpyuSU21ExCanK5JTbaakVFM-KakEsDty7-fdSodr4fS3h_rMAQh4kug0tlYF&_nc_ohc=uBpPcfM2ZDoQ7kNvwF8sHhZ&_nc_oc=AdlU0M4OG7l4xpuS704R-mwfhuOQZx-n4KwX0ckUOy6fsrO5hn9V82PKO4Xj4dAKEeU&_nc_zt=23&_nc_ht=scontent.ftrc3-1.fna&_nc_gid=1XRsZ9KTo_wy2J9BDr_3Iw&oh=00_AfcN0wIEvGecIDFtXFmM22XojQM1LFIMRLDFWg4Dll11eQ&oe=68EBA116" alt="Pantalon 1" class="slide">
+                 <img src="https://scontent.ftrc3-1.fna.fbcdn.net/v/t39.30808-6/511302246_1365448535588375_6070710067179054618_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEaY7zwWKMLghdwuoxoxlM4GLBcoHni2_AYsFygeeLb8NrXFMPbKvgCSxwCCGij-ru7OrbGD0ngICsprY5A1kOz&_nc_ohc=O6lnr5nhoBsQ7kNvwFXf2hu&_nc_oc=AdmBReNumJjHQBEyvy51XD7L2KFxMEib47_EWLEoJn6UZI2HBRSZIfD6wFmZALg98-0&_nc_zt=23&_nc_ht=scontent.ftrc3-1.fna&_nc_gid=QPP-OB3XDde-7bNAFd3SXw&oh=00_Afc2EI0D0PE2Hspn5yxfvdb-m5_QTs5xKLhH9T1aCTNggA&oe=68EBD1C9" alt="Pantalon 1" class="slide">
+                 <img src="" alt="Pantalon 1" class="slide">
+
+            </div>
+            <button class="carrusel-btn prev" onclick="cambiarSlide(-1)">❮</button>
+            <button class="carrusel-btn next" onclick="cambiarSlide(1)">❯</button>
+        </div>
+        <div class="carrusel-dots">
+            <span class="dot active" onclick="irASlide(0)"></span>
+            <span class="dot" onclick="irASlide(1)"></span>
+            <span class="dot" onclick="irASlide(2)"></span>
+            <span class="dot" onclick="irASlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <h3>Contáctanos</h3>
+        <p>📍 Torreón, Coahuila, México</p>
+        <p>📞 Teléfono: (123) 456-7890</p>
+        <p>📧 Email: contacto@ahuniforms.com</p>
+        <p>🕐 Horario: Lunes a Viernes 9:00 AM - 7:00 PM | Sábados 9:00 AM - 3:00 PM</p>
+     </footer>
