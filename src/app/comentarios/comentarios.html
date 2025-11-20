@@ -1,0 +1,150 @@
+ <!-- WhatsApp Button -->
+    <a href="https://wa.me/528714501852?text=Hola%20BH%20Uniformes%2C%20gracias%20por%20contactarnos.%20%C2%BFEn%20qu%C3%A9%20te%20podemos%20ayudar%3F" 
+       class="whatsapp-btn" 
+       target="_blank"
+       title="¡Contáctanos por WhatsApp!">
+       📞
+    </a>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">BH Uniformes</div>
+        <nav>
+            <a onclick="window.location.href='inicio'">Inicio</a>
+            <a onclick="window.location.href='catalogo'">Catálogo</a>
+            <a onclick="window.location.href='#contacto'">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Hero de Contacto -->
+    <section class="contacto-hero">
+        <div class="contacto-hero-content">
+            <h1>¡Contáctanos!</h1>
+            <p>Estamos aquí para ayudarte con los mejores uniformes escolares</p>
+        </div>
+    </section>
+
+    <!-- Sección Principal de Contacto -->
+    <section class="contacto-main" id="contacto">
+        <div class="contacto-grid">
+            <!-- Información de Contacto -->
+            <div class="info-contacto">
+                <h2>Información de Contacto</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-texto">
+                        <h3>Ubicación</h3>
+                        <p>Torreón, Coahuila, México</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div class="info-texto">
+                        <h3>Teléfono / WhatsApp</h3>
+                        <p><a href="tel:+528714501852">871-450-1852</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <div class="info-texto">
+                        <h3>Correo Electrónico</h3>
+                        <p><a href="mailto:bhuniformes@gmail.com">bhuniformes@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">🎓</div>
+                    <div class="info-texto">
+                        <h3>Especialidad</h3>
+                        <p>Uniformes escolares para todas las edades y niveles educativos</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de Comentarios -->
+            <div class="formulario-contacto">
+                <h2>Déjanos tu Comentario</h2>
+                <p>¿Tienes alguna pregunta o sugerencia? Escríbenos y te responderemos a la brevedad.</p>
+                
+                <div class="mensaje-exito" id="mensajeExito">
+                    ✅ ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+                </div>
+
+                <form id="formularioContacto">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="871-123-4567">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje / Comentario *</label>
+                        <textarea id="mensaje" name="mensaje" required placeholder="Escribe aquí tu mensaje..."></textarea>
+                    </div>
+
+                    <button type="button" class="btn-enviar" (click)="irARegistro()">Enviar Mensaje 📨</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redes Sociales -->
+    <section class="redes-sociales">
+        <h2>Síguenos en Redes Sociales</h2>
+        <p>Mantente actualizado con nuestras novedades y promociones</p>
+        
+        <div class="redes-grid">
+            <a href="https://www.facebook.com/bhuniforme" target="_blank" class="red-social">
+                <div class="red-icon">📘</div>
+                <h3>Facebook</h3>
+                <span>@bhuniforme</span>
+            </a>
+
+            <a href="https://www.instagram.com/bhuniforme" target="_blank" class="red-social">
+                <div class="red-icon">📸</div>
+                <h3>Instagram</h3>
+                <span>@bhuniforme</span>
+            </a>
+
+            <a href="https://wa.me/528714501852" target="_blank" class="red-social">
+                <div class="red-icon">💬</div>
+                <h3>WhatsApp</h3>
+                <span>871-450-1852</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Horario de Atención -->
+    <section class="horario-section">
+        <div class="horario-container">
+            <h2>Horario de Atención</h2>
+            <div class="horario-grid">
+                <div class="horario-card">
+                    <h3>🗓️ Lunes a Viernes</h3>
+                    <p>9:00 AM - 7:00 PM</p>
+                </div>
+                <div class="horario-card">
+                    <h3>🗓️ Sábados</h3>
+                    <p>9:00 AM - 3:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 BH Uniformes - Vistiendo el futuro desde 2010</p>
+        <p>Todos los derechos reservados</p>
+    </footer>

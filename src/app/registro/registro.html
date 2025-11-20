@@ -1,0 +1,159 @@
+<!-- Partículas de fondo -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Formas decorativas -->
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+
+    <!-- Contenedor de Registro -->
+    <div class="registro-container">
+        <!-- Panel Izquierdo - Información -->
+        <div class="registro-info">
+            <div class="logo-container">
+                <div class="logo-icon">🎓</div>
+                <div class="logo">BH Uniformes</div>
+                <h2>¡Únete a Nosotros!</h2>
+                <p>Crea tu cuenta y accede a todos los beneficios</p>
+            </div>
+
+            <div class="info-benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-text">Ofertas y descuentos exclusivos</div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">📦</div>
+                    <div class="benefit-text">Seguimiento de pedidos en tiempo real</div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-text">Proceso de compra rápido y seguro</div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🎁</div>
+                    <div class="benefit-text">Programa de recompensas</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel Derecho - Formulario -->
+        <div class="registro-form-container">
+            <h1>Crear Cuenta</h1>
+            <p class="subtitle">Completa el formulario para registrarte</p>
+
+            <div class="mensaje" id="mensaje"></div>
+
+            <form id="registroForm">
+                <!-- Nombres -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre *</label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="nombre" 
+                                name="nombre" 
+                                placeholder="Juan"
+                                required
+                            >
+                            <span class="input-icon">👤</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellido">Apellido *</label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="apellido" 
+                                name="apellido" 
+                                placeholder="Pérez"
+                                required
+                            >
+                            <span class="input-icon">👤</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="correo@ejemplo.com"
+                            required
+                        >
+                        <span class="input-icon">📧</span>
+                    </div>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="tel" 
+                            id="telefono" 
+                            name="telefono" 
+                            placeholder="871-123-4567"
+                            required
+                        >
+                        <span class="input-icon">📞</span>
+                    </div>
+                </div>
+
+                <!-- Contraseña -->
+                <div class="form-group">
+                    <label for="password">Contraseña *</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Mínimo 8 caracteres"
+                            required
+                        >
+                        <span class="input-icon">🔒</span>
+                        <span class="toggle-password" onclick="togglePassword('password')">👁️</span>
+                    </div>
+                    <div class="password-strength">
+                        <div class="password-strength-bar" id="passwordStrengthBar"></div>
+                    </div>
+                    <div class="password-hint" id="passwordHint">Usa mayúsculas, números y símbolos</div>
+                </div>
+
+                <!-- Confirmar Contraseña -->
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar Contraseña *</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            name="confirmPassword" 
+                            placeholder="Repite tu contraseña"
+                            required
+                        >
+                        <span class="input-icon">🔒</span>
+                        <span class="toggle-password" onclick="togglePassword('confirmPassword')">👁️</span>
+                    </div>
+                </div>
+
+                <!-- Botón de registro -->
+                <button type="submit" class="btn-registro" id="btnRegistro">
+                    Crear Mi Cuenta 🚀
+                </button>
+
+                <div class="divider">
+                    <span>o</span>
+                </div>
+
+                <div class="login-link">
+                    ¿Ya tienes cuenta? <a (click)="irALogin()">Inicia sesión aquí</a>
+                </div>
+            </form>
+        </div>
+    </div>

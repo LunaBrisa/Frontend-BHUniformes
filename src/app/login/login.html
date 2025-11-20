@@ -1,0 +1,92 @@
+<!-- Partículas de fondo -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Formas decorativas -->
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+
+    <!-- Contenedor de Login -->
+    <div class="login-container">
+        <!-- Panel Izquierdo - Información -->
+        <div class="login-info">
+            <div class="logo-container">
+                <div class="logo-icon">🎓</div>
+                <div class="logo">BH Uniformes</div>
+                <h2>Bienvenido de Nuevo</h2>
+                <p>Tu mejor opción en uniformes escolares de calidad</p>
+            </div>
+
+            <div class="info-features">
+                <div class="feature">
+                    <div class="feature-icon">✨</div>
+                    <div class="feature-text">Gestiona tus pedidos fácilmente</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-text">Acceso a ofertas exclusivas</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📦</div>
+                    <div class="feature-text">Seguimiento en tiempo real</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel Derecho - Formulario -->
+        <div class="login-form-container">
+            <h1>Iniciar Sesión</h1>
+            <p class="subtitle">Ingresa tus credenciales para continuar</p>
+
+            <div class="mensaje" id="mensaje"></div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="usuario">Usuario o Correo</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="usuario" 
+                            name="usuario" 
+                            placeholder="usuario@ejemplo.com"
+                            required
+                        >
+                        <span class="input-icon">👤</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="••••••••"
+                            required
+                        >
+                        <span class="input-icon">🔒</span>
+                        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Recordarme</label>
+                    </div>
+                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <button type="submit" class="btn-login" (click)="irAInicio()">Iniciar Sesión 🚀</button>
+
+                <div class="divider">
+                    <span>o</span>
+                </div>
+
+                <div class="register-link">
+                    ¿No tienes cuenta? <a (click)="irARegistro()">Regístrate aquí</a>
+                </div>
+            </form>
+        </div>
+    </div>

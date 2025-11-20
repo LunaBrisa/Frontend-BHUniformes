@@ -22,12 +22,14 @@ export class Inicio implements AfterViewInit {
     }
   }
 
-  galeria() {
+  irAGaleria() {
     this.router.navigate(['/catalogo']);
   }
-
-  inicio() {
+  irAInicio() {
     this.router.navigate(['/inicio']);
+  }
+   irAContacto() {
+    this.router.navigate(['/comentario']);
   }
 
   private inicializarAnimaciones(): void {

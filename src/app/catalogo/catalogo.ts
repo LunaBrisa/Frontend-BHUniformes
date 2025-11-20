@@ -12,11 +12,15 @@ export class Catalogo {
 
  constructor(private router: Router) {}
 
-  inicio() {
+  irAinicio() {
     this.router.navigate(['/inicio']);
   }
 
-    galeria() {
+    irAgaleria() {
     this.router.navigate(['/catalogo']);
+  }
+
+  irAContacto() {
+    this.router.navigate(['/comentario']);
   }
 }
