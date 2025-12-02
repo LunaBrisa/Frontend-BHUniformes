@@ -14,61 +14,50 @@ import { FormsModule } from '@angular/forms';
 export class Tienda {
 
   products = [
-    { id: 1, name: 'Camiseta Premium', price: 299, emoji: '👕' },
-    { id: 2, name: 'Pantalón Casual', price: 599, emoji: '👖' },
-    { id: 3, name: 'Sudadera Deportiva', price: 799, emoji: '🧥' },
-    { id: 4, name: 'Chamarra Elegante', price: 1299, emoji: '🧥' },
-    { id: 5, name: 'Vestido Moderno', price: 899, emoji: '👗' },
-    { id: 6, name: 'Shorts Verano', price: 399, emoji: '🩳' },
-  ];
+  { id: 1, name: 'Camiseta Premium', price: 299, image: 'assets/img/f1.png' },
+  { id: 2, name: 'Pantalón Casual', price: 599, image: 'assets/img/f2.png' },
+  { id: 3, name: 'Sudadera Deportiva', price: 799, image: 'assets/img/f3.png' },
+  { id: 4, name: 'Chamarra Elegante', price: 1299, image: 'assets/img/f4.png' },
+  { id: 5, name: 'Vestido Moderno', price: 899, image: 'assets/img/f5.png' },
+  { id: 6, name: 'Shorts Verano', price: 399, image: 'assets/img/f6.png' },
+];
+
 
   quantities: any = {};
   cart: any[] = [];
 
-  // Modal
   sizeModalOpen = false;
   currentProduct: any = null;
   selectedSize: string | null = null;
 
-  // Notificación
   notificationVisible = false;
+  cartPanelOpen = false;
 
- constructor(private router: Router) {
-
-  // inicializar cantidades
-  this.products.forEach(p => this.quantities[p.id] = 1);
-}
-
-
-  // Cambiar cantidad
-  changeQuantity(productId: number, delta: number) {
-    this.quantities[productId] = Math.max(
-      1,
-      Math.min(99, this.quantities[productId] + delta)
-    );
+  constructor(private router: Router) {
+    this.products.forEach(p => this.quantities[p.id] = 1);
   }
 
-  // Abrir modal de tallas
+  changeQuantity(productId: number, delta: number) {
+    this.quantities[productId] = Math.max(1, this.quantities[productId] + delta);
+  }
+
   openSizeModal(product: any) {
     this.currentProduct = product;
     this.selectedSize = null;
     this.sizeModalOpen = true;
   }
 
-  // Seleccionar talla
   selectSize(size: string) {
     this.selectedSize = size;
   }
 
-  // Cerrar modal
   closeModal() {
     this.sizeModalOpen = false;
   }
 
-  // Añadir producto al carrito
   confirmAddToCart() {
     if (!this.selectedSize) {
-      alert("Por favor selecciona una talla");
+      alert('Selecciona una talla');
       return;
     }
 
@@ -85,42 +74,39 @@ export class Tienda {
   }
 
   get cartCount() {
-    return this.cart.reduce((s, i) => s + i.quantity, 0);
+    return this.cart.reduce((a, b) => a + b.quantity, 0);
   }
 
   get totalPrice() {
-    return this.cart.reduce((s, i) => s + i.price * i.quantity, 0);
+    return this.cart.reduce((a, b) => a + b.quantity * b.price, 0);
   }
 
-  removeFromCart(index: number) {
-    this.cart.splice(index, 1);
+  removeFromCart(i: number) {
+    this.cart.splice(i, 1);
   }
 
-  // Notificación animada
   showNotification() {
     this.notificationVisible = true;
-    setTimeout(() => {
-      this.notificationVisible = false;
-    }, 3000);
+    setTimeout(() => this.notificationVisible = false, 2000);
   }
 
-  // Panel carrito
-  cartPanelOpen = false;
   toggleCart() {
     this.cartPanelOpen = !this.cartPanelOpen;
   }
 
-    irAGaleria() {
+  irAGaleria() {
     this.router.navigate(['/catalogo']);
   }
+
   irAInicio() {
     this.router.navigate(['/inicio']);
   }
-   irAContacto() {
+
+  irAContacto() {
     this.router.navigate(['/comentario']);
   }
 
   irATienda() {
-    this.router.navigate(['/carga']);
+    this.router.navigate(['/tienda']);  // ← CORREGIDO
   }
 }

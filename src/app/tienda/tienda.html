@@ -11,11 +11,15 @@
     <span class="cart-count">{{ cartCount }}</span>
   </button>
 </div>
+
 <!-- GRID DE PRODUCTOS -->
 <div class="products-grid">
   <div class="product-card" *ngFor="let p of products">
     
-    <div class="product-image">{{ p.emoji }}</div>
+    <div class="product-image">
+  <img [src]="p.image" alt="{{ p.name }}">
+</div>
+
     <div class="product-name">{{ p.name }}</div>
     <div class="product-price">$ {{ p.price }}</div>
 
@@ -71,7 +75,7 @@
     </div>
 
     <!-- Items -->
-    <div class="cart-item" *ngFor="let item of cart; let i = index">
+     <div class="cart-item" *ngFor="let item of cart; let i = index">
       <div class="cart-item-name">{{ item.emoji }} {{ item.name }}</div>
       <div class="cart-item-details">Talla: {{ item.size }}</div>
       <div class="cart-item-details">Cantidad: {{ item.quantity }}</div>

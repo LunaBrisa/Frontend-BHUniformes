@@ -13,4 +13,7 @@ export class Comentarios {
   irARegistro() {
     this.router.navigate(['registro']);
   }
+  irATienda() {
+    this.router.navigate(['/carga']);
+  }
 }

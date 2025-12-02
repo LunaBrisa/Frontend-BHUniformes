@@ -23,4 +23,8 @@ export class Catalogo {
   irAContacto() {
     this.router.navigate(['/comentario']);
   }
+
+  irATienda() {
+    this.router.navigate(['/carga']);
+  }
 }
