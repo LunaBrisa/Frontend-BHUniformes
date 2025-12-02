@@ -1,0 +1,94 @@
+<div class="header">
+  <h1>🛍️ Mi Tienda de Ropa</h1>
+  <nav>
+            <a (click)="irAInicio()">Inicio</a>
+            <a (click)="irAGaleria()">Galeria</a>
+            <a (click)="irAContacto()">Contacto</a>
+            <a (click)="irATienda()">Tienda</a>
+        </nav>
+  <button class="cart-button" (click)="toggleCart()">
+    🛒 Carrito
+    <span class="cart-count">{{ cartCount }}</span>
+  </button>
+</div>
+<!-- GRID DE PRODUCTOS -->
+<div class="products-grid">
+  <div class="product-card" *ngFor="let p of products">
+    
+    <div class="product-image">{{ p.emoji }}</div>
+    <div class="product-name">{{ p.name }}</div>
+    <div class="product-price">$ {{ p.price }}</div>
+
+    <!-- Selector de cantidad -->
+    <div class="quantity-selector">
+      <button class="quantity-btn" (click)="changeQuantity(p.id, -1)">-</button>
+      <span class="quantity-display">{{ quantities[p.id] }}</span>
+      <button class="quantity-btn" (click)="changeQuantity(p.id, 1)">+</button>
+    </div>
+
+    <button class="add-to-cart-btn" (click)="openSizeModal(p)">
+      Agregar al Carrito
+    </button>
+  </div>
+</div>
+
+<!-- MODAL DE TALLAS -->
+<div class="modal" [class.show]="sizeModalOpen">
+  <div class="modal-content">
+    <h2>Selecciona una talla</h2>
+
+    <div class="size-options">
+      <button 
+        class="size-btn"
+        *ngFor="let size of ['XS','S','M','L','XL','XXL']"
+        [class.selected]="selectedSize === size"
+        (click)="selectSize(size)">
+        {{ size }}
+      </button>
+    </div>
+
+    <div class="modal-buttons">
+      <button class="modal-btn cancel-btn" (click)="closeModal()">Cancelar</button>
+      <button class="modal-btn confirm-btn" (click)="confirmAddToCart()">Agregar</button>
+    </div>
+  </div>
+</div>
+
+<!-- PANEL DEL CARRITO -->
+<div class="cart-panel" [class.open]="cartPanelOpen">
+  
+  <div class="cart-header">
+    <h2>Mi Carrito</h2>
+    <button class="close-cart" (click)="toggleCart()">×</button>
+  </div>
+
+  <div id="cartItems">
+    
+    <!-- Carrito vacío -->
+    <div class="empty-cart" *ngIf="cart.length === 0">
+      <div class="empty-cart-icon">🛒</div>
+      <p>Tu carrito está vacío</p>
+    </div>
+
+    <!-- Items -->
+    <div class="cart-item" *ngFor="let item of cart; let i = index">
+      <div class="cart-item-name">{{ item.emoji }} {{ item.name }}</div>
+      <div class="cart-item-details">Talla: {{ item.size }}</div>
+      <div class="cart-item-details">Cantidad: {{ item.quantity }}</div>
+      <div class="cart-item-details">Precio: $ {{ item.price * item.quantity }}</div>
+
+      <button class="remove-item" (click)="removeFromCart(i)">Eliminar</button>
+    </div>
+
+  </div>
+
+  <div class="cart-total" *ngIf="cart.length > 0">
+    <h3>Total: $ {{ totalPrice }}</h3>
+  </div>
+
+</div>
+
+<!-- NOTIFICACIÓN -->
+<div class="notification" [class.show]="notificationVisible">
+  ✅ ¡Producto agregado al carrito!
+</div>

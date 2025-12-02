@@ -32,6 +32,10 @@ export class Inicio implements AfterViewInit {
     this.router.navigate(['/comentario']);
   }
 
+  irATienda() {
+    this.router.navigate(['/carga']);
+  }
+
   private inicializarAnimaciones(): void {
     // Crear partículas flotantes
     const container = document.getElementById('particles');
